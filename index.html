@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leefstijlcoach Rivierenland</title>
+
+ <style>
+    button,
+a.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover-effect */
+button:hover,
+a.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.btn-primary:hover {
+  background-color: #8FB3A4;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f1f1;
+}
+
+    .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+  background-color: #A8C7B8;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #8FB3A4;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #4d6b50;
+  border: 2px solid #A8C7B8;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+    .btn-primary {
+  background-color: #A8C7B8;
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #8FB3A4;
+  transform: translateY(-2px);
+}
+
+    @media (max-width: 900px) {
+  .container {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 5%;
+  }
+
+  .text-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-question {
+    max-width: 100%;
+  }
+
+  .about-content,
+  .about-section {
+    max-width: 100%;
+  }
+
+  .photo-section img {
+    width: 260px;
+    height: 330px;
+  }
+}
+    .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* ruimte tussen foto en tekst */
+  background-color: #EAF2E3; /* zelfde groene tint als nu */
+  padding: 40px;
+}
+
+.about-image {
+  width: 180px;       /* pas aan naar gewenste grootte */
+  height: 500px;
+  border-radius: 10px; /* zachte hoeken */
+  object-fit: cover;   /* vult netjes zonder vervorming */
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+
+.btn-readmore {
+  background-color: #A8C7B8;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.2s;
+  display: inline-block; /* maakt hem smal */
+}
+
+/* Deze is CRUCIAAL — zonder dit blijft hij breed */
+.faq .btn-readmore {
+  width: fit-content;   /* knop wordt zo breed als de tekst */
+  margin: 20px auto 40px; /* centreert hem */
+  display: block;       /* nodig om auto-centering te laten werken */
+}
+
+
+
+.btn-readmore:hover {
+  background-color: #8FB3A4;
+}
+
+
+  .btn-readmore:hover {
+    background-color: #8FB3A4;
+  }
+
+  nav {
+    background: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+  }
+
+  body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f7f5f1;
+      color:#2e3a2f;
+      line-height:1.6;
+  }
+
+  /* NAVBAR */
+
+  nav{
+      width:100%;
+      background:white;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .logo{
+      font-size:24px;
+      font-weight:bold;
+      color:#2E75B6;
+  }
+
+  nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+  }
+
+  nav ul li a{
+      text-decoration:none;
+      color:#2e3a2f;
+      font-weight:500;
+      transition:0.3s;
+  }
+
+  nav ul li a:hover{
+      color:#7a9b76;
+  }
+
+  /* HERO */
+
+  .hero{
+      height:90vh;
+      background-image:url("mainpage.png");
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+      position:relative;
+  }
+
+  .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.35);
+  }
+
+  .hero-content{
+      position:relative;
+      z-index:2;
+      color:white;
+      max-width:600px;
+  }
+
+  .hero-content h1{
+      font-size:58px;
+      margin-bottom:20px;
+  }
+
+  .hero-content p{
+      font-size:22px;
+      margin-bottom:30px;
+  }
+
+  .buttons{
+      display:flex;
+      gap:20px;
+  }
+
+  .btn{
+      padding:15px 30px;
+      border-radius:50px;
+      border:none;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+  }
+
+  .btn-primary{
+      background:#a7c4a0;
+      color:#fff;
+  }
+
+  .btn-primary:hover{
+      background:#8eaf87;
+  }
+
+  .btn-secondary{
+      background:white;
+      color:#2e3a2f;
+  }
+
+  .btn-secondary:hover{
+      background:#ececec;
+  }
+
+  /* INTRO */
+
+  .intro{
+      padding:100px 8%;
+      text-align:center;
+  }
+
+  .intro h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#4d6b50;
+  }
+
+  .intro p{
+      max-width:850px;
+      margin:auto;
+      font-size:18px;
+  }
+
+  /* CARDS */
+
+  .cards{
+      padding:40px 8% 100px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+  }
+
+  .card{
+      background:white;
+      padding:40px 30px;
+      border-radius:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      transition:0.3s;
+  }
+
+  .card:hover{
+      transform:translateY(-5px);
+  }
+
+  .card h3{
+      margin-bottom:15px;
+      color:#4d6b50;
+  }
+
+  /* ABOUT */
+
+  .about{
+      padding:100px 8%;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+      background:#eef2ea;
+  }
+
+  .about img{
+      width:100%;
+      border-radius:25px;
+  }
+
+  .about-text h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#4d6b50;
+  }
+
+  .about-text p{
+      margin-bottom:20px;
+      font-size:18px;
+  }
+
+  /* FAQ */
+
+  .faq{
+      padding:100px 8%;
+  }
+
+  .faq h2{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:40px;
+      color:#4d6b50;
+  }
+
+  .faq-container{
+      max-width:900px;
+      margin:auto;
+  }
+
+  .faq-item{
+      background:white;
+      margin-bottom:20px;
+      border-radius:15px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  }
+
+  .faq-question{
+      width:100%;
+      padding:25px;
+      border:none;
+      background:white;
+      text-align:left;
+      font-size:18px;
+      cursor:pointer;
+      font-weight:bold;
+      color:#2e3a2f;
+  }
+
+  .faq-answer{
+      display:none;
+      padding:0 25px 25px;
+      color:#555;
+  }
+
+  /* REVIEWS */
+
+  .reviews{
+      padding:100px 8%;
+      background:#f2f5ef;
+  }
+
+  .reviews h2{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:40px;
+      color:#4d6b50;
+  }
+
+  .review-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+  }
+
+  .review{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      box-shadow:0 10px 20px rgba(0,0,0,0.05);
+  }
+
+  .review h4{
+      margin-top:20px;
+      color:#4d6b50;
+  }
+
+  /* CONTACT */
+
+  .contact{
+      padding:100px 8%;
+      text-align:center;
+  }
+
+  .contact h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#4d6b50;
+  }
+
+  .contact p{
+      margin-bottom:30px;
+      font-size:18px;
+  }
+
+  footer{
+      background:#4d6b50;
+      color:white;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+  }
+
+  /* MOBILE */
+
+  @media(max-width:900px){
+
+      .hero-content h1{
+          font-size:40px;
+      }
+
+      .hero-content p{
+          font-size:18px;
+      }
+
+      .about{
+          grid-template-columns:1fr;
+      }
+
+      nav{
+          flex-direction:column;
+          gap:20px;
+      }
+
+      nav ul{
+          flex-wrap:wrap;
+          justify-content:center;
+      }
+
+      .buttons{
+          flex-direction:column;
+      }
+  }
+
+</style>
+
+</head>
+
+<body>
+    
+
+    <!-- NAVBAR -->
+
+    <nav>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <span>Leefstijlcoach Rivierenland</span>
+  </div>
+
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="gli.html">GLI</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+        <li><a href="zakelijk.html">Zakelijk</a></li>
+    <li><a href="over-mij.html">Over mij</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+
+ <!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Meer rust, energie en balans
+        </h1>
+
+        <p>
+            Persoonlijke leefstijlcoaching in Rivierenland.
+        </p>
+
+        <div class="buttons">
+
+<a href="contact.html" class="btn btn-primary">Plan kennismaking</a>
+<a href="gli.html" class="btn btn-secondary">Bekijk GLI traject</a>
+
+
+            
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </section>
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+        <h2>
+            Samen werken aan een gezonde leefstijl
+        </h2>
+
+        <p>
+            Kleine haalbare stappen zorgen voor blijvende veranderingen.
+            Met persoonlijke begeleiding werken we samen aan voeding,
+            beweging, ontspanning en mentale balans.
+        </p>
+
+    </section>
+
+    <!-- CARDS -->
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Voeding</h3>
+            <p>
+                Praktische en comfortabele begeleiding naar een gezond en haalbaar eetpatroon.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Beweging</h3>
+            <p>
+                Meer bewegen op een manier die past bij jouw leven.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Mentale balans</h3>
+            <p>
+                Meer rust, minder stress en beter omgaan met uitdagingen.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about">
+
+        <img src="Anouk-van-Dijk2.jpeg" alt="Anouk van Dijk" class="about-image">
+
+
+        <div class="about-text">
+
+            <h2>
+                Over mij
+            </h2>
+
+            <p>
+                Hallo! Mijn naam is Anouk van Dijk - van Roon. Samen met mijn man en 3 jongens woon ik in Tiel, midden in regio Rivierenland. Mijn taak als leefstijlcoach is om jou op een comfortabele manier te begeleiden naar een gezondere leefstijl.
+            </p>
+
+            <p>
+                Dat ik op een gezonde manier leef betekent niet dat ik leef op wortels en water. Wel denk ik goed na over wat ik daadwerkelijk eet, en wat er nodig is om gezond oud te worden.
+            </p>
+
+           <a href="over-mij.html" class="btn btn-primary">
+  Lees meer
+</a>
+
+
+        </div>
+
+    </section>
+
+    <!-- FAQ -->
+
+    <section class="faq">
+
+    <h2>Veelgestelde vragen</h2>
+
+    <div class="faq-container">
+
+        <!-- FAQ items hier -->
+        <div class="faq-item">
+            <button class="faq-question">Wat is GLI?</button>
+            <div class="faq-answer">De Gecombineerde Leefstijlinterventie (GLI) is een traject voor mensen met overgewicht of obesitas. Het richt zich op blijvende leefstijlverandering met begeleiding in voeding, beweging en gedrag. De GLI wordt sinds 2019 volledig vergoed vanuit de basisverzekering, zonder eigen risico.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Wordt coaching vergoed?</button>
+            <div class="faq-answer">Coaching binnen de GLI (zoals CooL) wordt onder voorwaarden volledig vergoed vanuit de basisverzekering. Je betaalt hiervoor geen eigen risico. Individuele leefstijlcoaching buiten de GLI valt meestal niet onder de vergoeding en is daarom vaak op eigen kosten.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Hoe meld ik mij aan?</button>
+            <div class="faq-answer">Je kunt je aanmelden door contact op te nemen met de leefstijlcoach via het contactformulier of e‑mail. Na aanmelding volgt een kennismakingsgesprek waarin wordt gekeken of de GLI bij je past. Daarna word je ingeschreven en kun je direct starten met het traject.</div>
+        </div>
+
+    </div>
+
+    <!-- KNOP NA de FAQ items -->
+    <a href="faq.html" class="btn-readmore">Lees verder</a>
+
+    <!-- CONTACT -->
+
+    <section class="contact">
+
+        <h2>Neem contact op</h2>
+
+        <p>
+            Plan vrijblijvend een kennismakingsgesprek.
+        </p>
+
+ <a href="contact.html" class="btn btn-primary">
+  Contact opnemen
+</a>
+
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        © 2026 Leefstijlcoach Rivierenland
+
+    </footer>
+
+    <!-- FAQ SCRIPT -->
+
+    <script>
+
+        const questions =
+            document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                const answer =
+                    question.nextElementSibling;
+
+                if(answer.style.display === "block"){
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

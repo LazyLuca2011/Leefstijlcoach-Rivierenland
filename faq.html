@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Leefstijlcoach Rivierenland</title>
+
+  <style>
+    @media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f8f6e9;
+      color: #2e3a2f;
+      line-height: 1.7;
+    }
+
+    nav {
+      background: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2E75B6;
+    }
+
+    .logo img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e3a2f;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #4d6b50;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      font-size: 20px;
+      font-weight: bold;
+      color: #2E75B6;
+      cursor: pointer;
+      padding: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .faq-question:hover {
+      color: #4d6b50;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px 0 0 0;
+      color: #2e3a2f;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #4d6b50;
+      margin-top: 60px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const items = document.querySelectorAll(".faq-item");
+
+      items.forEach(item => {
+        item.querySelector(".faq-question").addEventListener("click", () => {
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <span>Leefstijlcoach Rivierenland</span>
+    </div>
+
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="coaching.html">Coaching</a></li>
+      <li><a href="gli.html">GLI</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+            <li><a href="zakelijk.html">Zakelijk</a></li>
+      <li><a href="over-mij.html">Over mij</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <h1>Veelgestelde vragen</h1>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">Wat is GLI?</button>
+      <div class="faq-answer">
+      De Gecombineerde Leefstijlinterventie (GLI) is een traject voor mensen met overgewicht of obesitas. Het richt zich op blijvende leefstijlverandering met begeleiding in voeding, beweging en gedrag. De GLI wordt sinds 2019 volledig vergoed vanuit de basisverzekering, zonder eigen risico.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Wordt coaching vergoed?</button>
+      <div class="faq-answer">
+        Coaching binnen de GLI (zoals CooL) wordt onder voorwaarden volledig vergoed vanuit de basisverzekering. Je betaalt hiervoor geen eigen risico. Individuele leefstijlcoaching buiten de GLI valt meestal niet onder de vergoeding en is daarom vaak op eigen kosten.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Hoe meld ik mij aan?</button>
+      <div class="faq-answer">
+        Je kunt je aanmelden door contact op te nemen met de leefstijlcoach via het contactformulier, e‑mail of telefoonnummer. Na aanmelding volgt een kennismakingsgesprek waarin wordt gekeken of de GLI bij je past. Daarna word je ingeschreven en kun je direct starten met het traject.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Wat houdt een kennismakingsgesprek in?</button>
+      <div class="faq-answer">
+        Een kennismakingsgesprek is een vrijblijvend gesprek waarin we samen kijken naar jouw situatie, doelen en verwachtingen. We bespreken wat de GLI inhoudt, of je aan de voorwaarden voldoet en hoe het traject eruit zal zien. Het is een mooie gelegenheid om vragen te stellen en te ontdekken of dit bij jou past.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Hoe lang duurt een traject?</button>
+      <div class="faq-answer">
+        De GLI duurt twee jaar. Individuele coaching verschilt per persoon en wordt afgestemd op jouw doelen.
+      </div>
+    </div>
+
+    <div class="faq-item">
+  <button class="faq-question">Heb ik een verwijzing van de huisarts nodig?</button>
+  <div class="faq-answer">
+    Voor de GLI heb je een verwijzing van de huisarts nodig. Voor individuele coaching is dit niet nodig.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Hoe ziet een traject er precies uit?</button>
+  <div class="faq-answer">
+    Tijdens een kennismakingsgesprek bespreken we jouw doelen. Daarna volgt een intake en starten we met sessies die passen bij jouw situatie. De duur verschilt per persoon.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Kan ik zowel GLI als individuele coaching volgen?</button>
+  <div class="faq-answer">
+    Ja, dat kan. Sommige mensen volgen de GLI en kiezen daarnaast voor extra individuele begeleiding, omdat ze af en toe behoefte hebben aan extra ondersteuning of een persoonlijker traject.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Hoe snel merk ik resultaat?</button>
+  <div class="faq-answer">
+    Dat verschilt per persoon. Veel mensen merken binnen enkele weken meer energie en rust. Duurzame verandering kost tijd, maar elke stap telt.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Wat moet ik meenemen naar de intake?</button>
+  <div class="faq-answer">
+    Je hoeft niets mee te nemen. Vooraf zal er een afspraak worden gemaakt, en in die afspraak wordt alleen besproken wat jouw doelen zijn en hoe we samen kunnen werken aan een gezondere leefstijl. Je kunt natuurlijk wel alvast nadenken over wat je graag zou willen bereiken.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Is online coaching ook mogelijk?</button>
+  <div class="faq-answer">
+    Ja, coaching kan zowel op locatie als online plaatsvinden. We kiezen wat voor jou het prettigst werkt.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Wat als ik een afspraak moet verzetten?</button>
+  <div class="faq-answer">
+    Laat dit minimaal 24 uur van tevoren weten. Doe je dit niet, dan worden de kosten van het consult in rekening gebracht.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Hoe groot zijn de GLI-groepen?</button>
+  <div class="faq-answer">
+    De groepen zijn kleinschalig zodat er voldoende persoonlijke aandacht is en iedereen zich veilig voelt.
+  </div>
+</div>
+
+<div class="faq-item">
+  <button class="faq-question">Ik heb al veel geprobeerd. Hoe weet ik dat dit werkt?</button>
+  <div class="faq-answer">
+    De GLI en coaching richten zich op kleine, haalbare stappen en op het omgaan met gedachten en gevoelens. Hierdoor ontstaat duurzame verandering zonder strenge regels.
+  </div>
+</div>
+
+
+  </div>
+
+  <footer>
+    © 2026 Leefstijlcoach Rivierenland — Alle rechten voorbehouden
+  </footer>
+
+</body>
+</html>
